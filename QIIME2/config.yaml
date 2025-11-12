@@ -1,1 +1,41 @@
+# QIIME2 16S Analysis Configuration
+# BPD Microbiome Study
 
+# Primer sequences for V3-V4 region
+primers:
+  forward: "ACTCCTACGGGAGGCAGCAG"  # 338F
+  reverse: "GGACTACHVGGGTWTCTAAT"  # 806R
+
+# DADA2 parameters
+dada2:
+  trunc_len_f: 270    # Forward read truncation length
+  trunc_len_r: 218    # Reverse read truncation length
+  max_ee_f: 2.0       # Forward read max expected errors
+  max_ee_r: 2.0       # Reverse read max expected errors
+  trunc_q: 2          # Truncation quality score
+
+# Filtering parameters
+filtering:
+  min_frequency: 1    # Minimum feature frequency
+  sampling_depth: 22000  # Rarefaction depth
+
+# Taxonomic classification
+taxonomy:
+  database: "silva-138-99"  # Reference database
+  confidence: 0.7          # Classification confidence
+
+# Diversity analysis
+diversity:
+  sampling_depth: 22000    # Alpha rarefaction depth
+  metrics: ["shannon", "observed_features", "faith_pd", "pielou_e"]
+
+# Output settings
+output:
+  visualization: true
+  export_tables: true
+  create_phylogeny: true
+
+# Computational resources
+resources:
+  cores: 8
+  memory: "16G"
