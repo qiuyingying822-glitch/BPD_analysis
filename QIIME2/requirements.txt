@@ -1,1 +1,9 @@
+# QIIME2 Environment Requirements
+# Use conda to install QIIME2
 
+qiime2==2023.9
+biom-format
+cutadapt
+dada2
+mafft
+fasttree
