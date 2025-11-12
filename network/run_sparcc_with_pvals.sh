@@ -1,6 +1,5 @@
 #!/bin/bash
 # SparCC correlation analysis workflow for BPD samples
-# Author: [Your Name]
 # Date: 2025-11
 # Requires: Python + SparCC + numpy
 
