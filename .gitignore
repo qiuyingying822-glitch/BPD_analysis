@@ -1,0 +1,121 @@
+# R related files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj
+.Renviron
+
+# Python related files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# QIIME2 related files
+*.qza
+*.qzv
+*.qsi
+
+# Data files (avoid uploading large files)
+*.rds
+*.rda
+*.csv
+*.xlsx
+*.xls
+*.txt
+*.tsv
+*.biom
+
+# Raw sequencing data (should be kept separately)
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Output directories with large files
+output/
+results/
+model_results/
+bootstraps/
+pvals/
+logs/
+visual/
+export/
+rarefy/
+feature_table/
+rep_seqs/
+taxonomy/
+gephi/
+network/
+sensitivity_analysis/
+
+# Database files (too large for GitHub)
+*.qza  # except small example files
+silva-138-99-seqs.qza
+silva-138-99-tax.qza
+silva-138-99-v3v4-seqs.qza
+silva-138-99-v3v4-classifier.qza
+
+# Temporary files
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+*.code-workspace
+
+# Log files
+*.log
+*.out
+
+# Package files
+*.tar.gz
+*.zip
+
+# Keep only small example data files
+!*/example/*.csv
+!*/example/*.txt
+!*/example/*.tsv
+
+# Keep configuration files
+!*.yaml
+!*.yml
+!*.json
+!*.R
+!*.sh
+!*.md
+
+# Keep small essential data files in data directory
+!data/README.md
+!data/*.md
+
+# Exclude all large data files by default
+data/raw/
+data/processed/
+*.biom
+*.fastq.gz
+
+# But keep example/small data files
+!*/example/*.csv
+!*/example/*.txt
