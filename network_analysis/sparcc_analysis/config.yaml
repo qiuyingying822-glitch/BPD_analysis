@@ -1,1 +1,34 @@
+# SparCC Analysis Configuration
+# This file contains configuration parameters for SparCC analysis
 
+analysis:
+  # Correlation calculation parameters
+  iterations: 20           # Number of iterations for SparCC
+  bootstrap_samples: 100   # Number of bootstrap samples
+  threshold: 0.3          # Correlation threshold for network construction
+  p_value_cutoff: 0.05    # P-value cutoff for significance
+  
+  # Input/output settings
+  input_format: "txt"      # Input file format
+  output_format: "txt"     # Output file format
+  delimiter: "\t"         # Column delimiter
+  
+  # Groups to analyze
+  groups:
+    - "none"
+    - "mild" 
+    - "moderate"
+    - "severe"
+
+directories:
+  input: "data/input"      # Input data directory
+  output: "results"        # Output results directory
+  bootstraps: "bootstraps" # Bootstrap data directory
+  pvals: "pvals"          # P-value results directory
+  logs: "logs"            # Log files directory
+
+file_patterns:
+  input: "{group}/norm_rarefy_{group}_relabundance.txt"
+  correlation: "{group}/cor_sparcc.norm_rarefy_{group}.txt"
+  bootstrap: "bootstraps/{group}/{group}_bootstrap_{number}.txt"
+  pvalues: "pvals/{group}/pvals.{group}.txt"
