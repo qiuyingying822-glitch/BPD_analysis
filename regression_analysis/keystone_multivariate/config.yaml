@@ -1,1 +1,64 @@
 
+# Keystone Taxa Multivariate Analysis Configuration
+
+analysis:
+  # ASVs to analyze
+  keystone_asvs:
+    - "ASV1303"
+    - "ASV2215"
+    - "ASV1702"
+    - "ASV708"
+
+  # Clinical covariates for adjustment
+  covariates:
+    demographic:
+      - "Gender"
+      - "Gestational_age_std"
+      - "Birth_Weight_std"
+    clinical:
+      - "Delivery_mode"
+      - "ACS"
+      - "Chorioamnionitis"
+      - "MSF"
+      - "Antimicrobial_type"
+      - "Intrauterine_Distress"
+      - "EUGR"
+      - "Hospital_Stay_std"
+
+  # Stepwise variable addition order
+  variable_order:
+    - "Gender"
+    - "Gestational_age_std"
+    - "Birth_Weight_std"
+    - "Delivery_mode"
+    - "ACS"
+    - "Chorioamnionitis"
+    - "MSF"
+    - "Antimicrobial_type"
+    - "Intrauterine_Distress"
+    - "EUGR"
+    - "Hospital_Stay_std"
+
+  # Imputation settings
+  imputation:
+    method: "mice"
+    m: 5
+    maxit: 10
+    seed: 123
+
+  # Model parameters
+  model:
+    family: "ordinal"
+    link: "logit"
+
+data:
+  # Input files
+  metadata: "metadata.xlsx"
+  keystone_taxa: "keystone_taxa_detailed.txt"
+  asv_abundance: "rerafy_rel_asvtable.csv"
+
+  # Output files
+  output:
+    imputed_data: "metadata_mice.csv"
+    results: "keystone_multivariate_results.csv"
+    plot: "keystone_association_plot.png"
