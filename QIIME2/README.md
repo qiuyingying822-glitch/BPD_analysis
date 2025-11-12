@@ -12,7 +12,6 @@ qiime2_analysis/
 ├── metadata.txt                    # 📊 Metadata template
 ├── scripts/                        # 🔧 Individual analysis steps
 ├── database/                       # 🗄️ Reference databases
-└── example/                        # 🧪 Example files
 ```
 
 ## 🚀 Quick Start
