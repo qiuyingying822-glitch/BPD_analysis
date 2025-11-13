@@ -8,37 +8,31 @@ This repository contains a complete analytical workflow for studying the gut mic
 
 ## Project Structure
 BPD_analysis/
-├── QIIME2/                    
+├── QIIME2/
 │   ├── README.md
 │   ├── run_qiime2_pipeline.sh
 │   ├── scripts/
 │   ├── config.yaml
-│   └── manifest.csv 
-│
-├── network_analysis/                    
+│   └── manifest.csv
+├── network_analysis/
 │   ├── README.md
-│   │
-│   ├── sparcc_analysis/               
+│   ├── sparcc_analysis/
 │   │   ├── run_sparcc_pipeline.sh
 │   │   ├── process_sparcc_results.R
 │   │   ├── install_sparcc.sh
 │   │   └── config.yaml
-│   │
-│   ├── keystone_analysis/              
+│   ├── keystone_analysis/
 │   │   ├── identify_keystone_taxa_enhanced.R
 │   │   ├── identify_keystone_taxa_sensitivity.R
 │   │   └── export_gephi_files.R
-│   │
-│   └── sensitivity_analysis/           
+│   └── sensitivity_analysis/
 │       ├── analyze_low_correlation.R
 │       └── method_comparison.R
-│
-├── regression_analysis/               
-│   ├── README.md
-│   ├── network_metrics_model/
-│   └── keystone_multivariate/
-│
-└── README.md                         
+└── regression_analysis/
+    ├── README.md
+    ├── network_metrics_model/
+    ├── keystone_multivariate/
+    └── README.md
 
 ## 🔄 Analysis Workflow
 
