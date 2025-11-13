@@ -76,17 +76,17 @@ cd ../../regression_analysis/network_metrics_model
 Rscript network_metrics_regression.R
 
 ###2. Individual Module Usage
-Each module can be run independently - see the respective README files for detailed instructions.
+#Each module can be run independently - see the respective README files for detailed instructions.
 
-📁 Module Details
-🔬 QIIME2 Analysis
+##📁 Module Details
+##🔬 QIIME2 Analysis
 Input: Raw FASTQ sequences
 
 Output: ASV tables, taxonomic assignments
 
 See qiime2_analysis/README.md
 
-🌐 Network Analysis (Integrated)
+## 🌐 Network Analysis (Integrated)
 SparCC Networks: Correlation-based network construction
 
 Keystone Identification: Topological analysis and key species detection
@@ -95,14 +95,14 @@ Sensitivity Tests: Method comparisons and robustness validation
 
 See network_analysis/README.md
 
-📊 Statistical Modeling
+## 📊 Statistical Modeling
 Network metrics as predictors for BPD severity
 
 Multivariate analysis of keystone taxa
 
 See regression_analysis/README.md
 
-⚙️ Configuration
+## ⚙️ Configuration
 Each module contains its own config.yaml for parameter customization:
 
 Analysis parameters
@@ -113,7 +113,7 @@ Statistical thresholds
 
 Visualization settings
 
-📊 Output
+## 📊 Output
 Standardized outputs across all modules:
 
 Processed data tables
@@ -124,7 +124,7 @@ Publication-ready visualizations
 
 Reproducibility logs
 
-🔧 Dependencies
+## 🔧 Dependencies
 See individual module READMEs for specific requirements:
 
 QIIME2 (2023.9+)
@@ -133,8 +133,8 @@ R (4.0.0+) with tidyverse, igraph, MASS
 
 Python (3.6+) with SparCC, numpy, scipy
 
-📚 Citation
+## 📚 Citation
 Please cite the relevant methodological papers and this repository if used in your research.
 
-🤝 Contributing
+## 🤝 Contributing
 Issues and pull requests are welcome for improvements to the analysis pipeline.
